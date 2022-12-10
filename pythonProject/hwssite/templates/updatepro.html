@@ -1,0 +1,30 @@
+{% extends 'basicpage.html' %}
+
+{% block content %}
+
+<div class="container">
+
+    <form action="" method="POST">
+        {% load static %}
+          {% csrf_token %}
+        <link rel="stylesheet" href="{% static 'updateprof.css' %}">
+
+        <div class="row">
+  <div class="column"><h2>Name</h2> <input type="text" name="fullname" id="fullname" value="{{name}}"><br>
+            <h2>Age</h2>  <input type="number" name="age" id="age" value="{{age}}"><br>
+            <h2>Email</h2> <input type="email" name="mail" id="mail" value="{{mail}}"><br>
+         <h2>Image</h2> <input type="file" name="img" id="img" value="{{image}}">
+
+</div>
+  <div class="column">    <h2>Mobile Number</h2> <input type="number" name="mob" id="mob" value="{{mob}}">
+      <h2>Address</h2> <input type="text" name="addr" id="addr" value="{{addr}}"><br>
+            <h2>Instagram</h2>  <input type="text" name="insta" id="insta" value="{{insta}}"><br>
+            <h2>FaceBook</h2> <input type="text" name="fb" id="fb" value="{{fb}}"><br>
+      <br>
+        <a href="{% url 'profile' %}"> <button class="btn btn-primary" >Update Profile</button> </a>
+</div>
+</div>
+    </form>
+    </div>
+
+{% endblock %}

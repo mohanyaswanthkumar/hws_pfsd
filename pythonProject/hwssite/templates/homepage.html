@@ -1,0 +1,75 @@
+{% extends 'basicpage.html' %}
+
+
+{% block content %}
+
+ <div class="clearfix">
+{% csrf_token %}
+
+            <div class="box">
+                {% load static %}
+            <img src="{% static 'homeimg.jpg' %}" alt="" width="490px" height="460px">
+            </div>
+            <div class="box">
+            <p> <h1>Best Care For Your Good Health</h1></p>
+            <br>
+            <h5>    Health care is a maintaince or improvement of health via the prevention , diagnosis , treatment or cure of disease , illness , imjury and other physical and mental impairments in people</h5>
+            <p class="text-muted">
+        <ion-icon name="checkmark-circle-outline"></ion-icon>
+        all type of medical sevices
+      </p>
+      <p class="text-muted">
+        <ion-icon name="checkmark-circle-outline"></ion-icon>
+        24/7 helpline
+      </p>
+      <p class="text-muted">
+        <ion-icon name="checkmark-circle-outline"></ion-icon>
+        clarify your doubts regarding health
+      </p>
+      <button type="button" class="btn btn-outline-info">Learn More</button>
+            </div>
+          </div>
+
+          <br>
+<h3 style="text-align:center">Our Departments</h3>
+<br>
+<br>
+          <div class="clearfix">
+            <div class="img-container">
+            <img src="{% static 'dental.jpg' %}" alt="Italy" style="width:90%" height="60%">
+                <h3>Dental Care</h3>
+                <p style="width:90%">Dental care or dentalcare is the maintenance of healthy teeth and may refer to: Oral hygiene, the practice of keeping the mouth and teeth clean in order to prevent dental disorders.</p>
+            </div>
+            <div class="img-container">
+            <img src="{% static 'surgery.jpg' %}" alt="Forest" style="width:90%" height="60%">
+                <h3>Surgery Service</h3>
+                <p>Surgery is a medical or dental specialty that uses operative manual and instrumental techniques on a person to investigate or treat a pathological condition such as a disease or injury, to help improve bodily function, appearance, or to repair unwanted ruptured areas.</p>
+            </div>
+            <div class="img-container">
+            <img src="{% static 'eye.jpg' %}" alt="Mountains" style="width:90%" height="60%">
+                <h3>Eye Care</h3>
+                <p style="width:90%">Your eyes are an important part of your health. Most people rely on their eyes to see and make sense of the world around them. But some eye diseases can lead to vision loss, so it is important to identify and treat eye diseases as early as possible</p>
+            </div>
+          </div>
+<div class="clearfix">
+            <div class="img-container">
+            <img src="{% static 'phy.jpeg' %}" alt="Italy" style="width:100%" height="60%">
+                <h3>Physical Therapy</h3>
+                <p style="width:90%">Physiotherapy helps to restore movement and function when someone is affected by injury, illness or disability. It can also help to reduce your risk of injury or illness in the future.</p>
+            </div>
+            <div class="img-container">
+            <img src="{% static 'skin.png' %}" alt="Forest" style="width:100%" height="60%">
+                <h3>Skin Surgery</h3>
+                <p style="width:90%">
+                    Skin surgery is routinely performed by dermatologists and plastic surgeons, mostly using local anaesthesia. Types of skin surgery include: Skin biopsy (punch biopsy, shave biopsy, incisional biopsy and excision biopsy) Electrosurgery.
+                </p>
+            </div>
+            <div class="img-container">
+            <img src="{% static 'preg.jpeg' %}" alt="Mountains" style="width:100%" height="60%">
+                <h3>
+                Pregnancy Care
+                </h3>
+                <p style="width:90%">Pregnancy care consists of prenatal (before birth) and postpartum (after birth) healthcare for expectant mothers. It involves treatments and trainings to ensure a healthy prepregnancy, pregnancy, and labor and delivery for mom and baby.</p>
+            </div>
+          </div>
+{% endblock %}

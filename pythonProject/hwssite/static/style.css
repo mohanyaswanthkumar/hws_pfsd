@@ -1,0 +1,34 @@
+#one{
+    
+    color: aliceblue;
+    border: 10px solid lightblue;
+    border-radius: 20px;
+    padding: 10px;
+}
+* {
+    box-sizing: border-box;
+  }
+  
+  .box {
+    float: left;
+    width: 45.33%;
+    padding: 50px;
+  }
+  
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+body
+{
+ margin: 20px;
+}
+.img-container {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+  .hell{
+  float:left;
+  }

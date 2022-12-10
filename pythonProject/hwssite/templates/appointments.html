@@ -1,0 +1,72 @@
+{% extends 'basicpage.html' %}
+
+{% block content %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'appointcss.css' %}">
+
+<div class="row">
+  <div class="column">
+
+      <h4 class="text-center alert alert-info">Create Appointment</h4>
+       <form method="POST">
+           {% csrf_token %}
+           <h3>Patient Name</h3>
+<h4>{{obj1.fullname}}</h4>
+<br>
+<br>
+           <h3>Mobile Number</h3>
+<h4>{{obj1.mobile}}</h4>
+<br>
+<br>
+
+<h3>Address</h3>
+<h4>{{obj1.addr}}</h4>
+<br>
+<br>
+<h3>Email</h3>
+<h4>{{obj1.mail}}</h4>
+<br>
+<br>
+  <h3>Gender</h3>
+<input type="radio" name="gender" value="m"> Male
+<input type="radio" name="gender" value="f"> Female
+<br>
+<br>
+    <h3>Enter Problem</h3>
+<input type="text" name="prob" id="prob" required>
+<br>
+<br>
+<h3>Time of Appointment</h3>
+           <input type="datetime-local" id="time" name="time" required>
+<br>
+<br>
+<div class="clearfix">
+    <a href="{% url 'appointments' %}"> <button class="btn btn-primary" >Submit</button> </a>
+    <a href="{% url 'homepage' %}"> <button class="btn btn-primary" >Reset</button> </a>
+</div>
+<br>
+</form>
+  </div>
+  <div class="col-sm-6">
+       <h4 class="text-center alert alert-info">My Appointments</h4>
+      <table class="table table-hover">
+  <tr>
+    <th>Name</th>
+    <th>Problem</th>
+      <th>Mobile</th>
+      <th>Status</th>
+  </tr>
+{% for i in obj %}
+<tr>
+    <th>{{i.name}}</th>
+    <th>{{i.problem}}</th>
+    <th>{{i.mobile}}</th>
+    <th>{{i.status}}</th>
+</tr>
+<br>
+{% endfor %}
+          </table>
+  </div>
+</div>
+{% endblock %}
