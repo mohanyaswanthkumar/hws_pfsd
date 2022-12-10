@@ -1,4 +1,4 @@
-cdby users..
+by users..
 
 git clone link
 cd repositoryname
