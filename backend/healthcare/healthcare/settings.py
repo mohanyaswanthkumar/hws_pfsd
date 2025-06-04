@@ -103,7 +103,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'healthcare_db',
         'USER': os.getenv('DB_USER', 'root'),
-        'PASSWORD': os.getenv('DB_PASSWORD', 'Bitra98851@'),
+        'PASSWORD': os.getenv('DB_PASSWORD', 'Bitra'),
         'HOST': 'localhost',
         'PORT': '3306',
     }
