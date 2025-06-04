@@ -1,0 +1,27 @@
+by users..
+
+git clone link
+cd repositoryname
+git config user.name " "
+git config user.email " "
+touch file
+notepad file
+git add .
+git commit -m " "
+git push
+
+by collaborators..
+
+git clone link
+cd repositoryname
+git config user.name " "
+git config user.email " "
+git pull
+touch file
+notepad file
+git add .
+git commit -m " "
+git push
+
+--------
+
